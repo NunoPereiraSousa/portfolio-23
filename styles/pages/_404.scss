@@ -1,0 +1,97 @@
+.error {
+  background-color: $color-red;
+  padding: 4rem;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+
+  @include media("<=tablet") {
+    padding: 2rem;
+  }
+
+  @include media("<phone") {
+    overflow: auto;
+    height: auto;
+  }
+}
+
+.error_wrapper {
+  @extend %max-width;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+
+  @include media("<=tablet") {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10rem;
+  }
+}
+
+.error_descriptions {
+  align-items: flex-start;
+  display: flex;
+  justify-content: space-between;
+
+  @include media("<phone") {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+.error_description {
+  max-width: 118.9rem;
+
+  p {
+    @extend %heading-180;
+
+    @include media("<phone") {
+      font-size: 8rem;
+    }
+  }
+
+  &:last-child p {
+    text-align: right;
+  }
+}
+
+.error_bottom {
+  align-items: flex-end;
+  display: flex;
+  justify-content: space-between;
+
+  @include media("<=tablet") {
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+  }
+}
+
+.error_button {
+  background-color: $color-white;
+  border-radius: 5rem;
+  color: $color-red;
+  font-weight: 700;
+  font-size: 1.5rem;
+  display: block;
+  padding: 1.8rem 4rem;
+  margin-top: 12rem;
+  text-align: center;
+  text-transform: uppercase;
+
+  animation: pulse 1s ease infinite;
+
+  @include media("<=tablet") {
+    margin-top: 0;
+  }
+}
+
+.error_label {
+  a {
+    text-decoration: underline;
+  }
+}

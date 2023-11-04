@@ -1,0 +1,146 @@
+.hero {
+  padding: 4rem 0 4rem 8rem;
+  position: relative;
+
+  @include media("<=tablet") {
+    height: auto;
+    padding: 8rem 2rem 0;
+  }
+
+  &::after {
+    content: "";
+    background-color: $color-orange;
+
+    height: 100%;
+    width: 81rem;
+
+    position: absolute;
+    left: 131.5rem;
+    top: 0;
+    z-index: -1;
+
+    @include media("<=tablet") {
+      display: none;
+    }
+  }
+}
+
+.hero_wrapper {
+  display: flex;
+  position: relative;
+  height: 100%;
+
+  @include media("<=tablet") {
+    flex-direction: column;
+  }
+}
+
+.hero_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @include media("<=tablet") {
+    flex-direction: column-reverse;
+    gap: 4rem;
+  }
+}
+
+.hero_top {
+  display: flex;
+  gap: 8rem;
+
+  @include media("<=tablet") {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+.hero_top_left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @include media("<=tablet") {
+    align-items: flex-start;
+    gap: 1rem;
+    flex-direction: column-reverse;
+  }
+}
+
+.hero_role {
+  color: $color-orange;
+  margin-top: -2.5rem;
+
+  @include media("<=tablet") {
+    margin-top: 0;
+  }
+}
+
+.hero_top_left_bottom {
+  align-items: flex-end;
+  display: flex;
+  justify-content: space-between;
+
+  @include media("<=tablet") {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+.hero_headline {
+}
+
+.hero_description {
+  max-width: 45.9rem;
+}
+
+.hero_button {
+  cursor: pointer;
+  display: block;
+  text-transform: capitalize;
+  text-decoration: underline;
+  text-decoration-color: $color-white;
+}
+
+.hero_top_middle {
+}
+
+.hero_figure {
+  @include figure(47.4rem, 41.6rem);
+
+  @include media("<phone") {
+    @include figure(40.2rem, 100%);
+  }
+}
+
+.hero_image {
+  @extend %image-cover;
+}
+
+.hero_top_right {
+}
+
+.hero_location {
+  margin-top: -1.5rem;
+
+  @include media("<=tablet") {
+    margin-top: 0;
+  }
+}
+
+.hero_label {
+  max-width: 45rem;
+  margin-top: 3rem;
+
+  @include media("<=tablet") {
+    margin-top: 0;
+  }
+}
+
+.hero_bottom {
+  svg {
+    display: block;
+  }
+}

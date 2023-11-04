@@ -1,0 +1,54 @@
+.awards {
+  padding: 4rem 0;
+
+  @include media("<=tablet") {
+    padding: 0 2rem;
+  }
+}
+
+.awards_wrapper {
+  display: flex;
+  height: 100%;
+
+  @include media("<=tablet") {
+    flex-direction: column;
+  }
+}
+
+.awards_content {
+  display: flex;
+  gap: 12rem;
+
+  @include media("<=tablet") {
+    flex-direction: column;
+    gap: 6rem;
+  }
+}
+
+.awards_left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.awards_headline {
+}
+
+.awards_description {
+  max-width: 70.9rem;
+
+  @include media("<=tablet") {
+    width: 100%;
+  }
+}
+
+.awards_grid {
+  display: flex;
+  gap: 8rem;
+
+  @include media("<=tablet") {
+    flex-direction: column;
+    gap: 3rem;
+  }
+}

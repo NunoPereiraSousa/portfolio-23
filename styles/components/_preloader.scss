@@ -1,0 +1,56 @@
+.preloader {
+  @extend %position-fixed;
+
+  background-color: $color-blue;
+  height: 100vh;
+  overflow: hidden;
+  padding: 4rem;
+  z-index: z("preloader");
+  will-change: transform;
+
+  @include media("<=tablet") {
+    padding: 6rem 2rem;
+  }
+}
+
+.preloader_wrapper {
+  max-width: 192rem;
+  margin: auto;
+
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  filter: blur(4rem);
+}
+
+.preloader_top {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.preloader_label {
+}
+
+.preloader_bottom {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.preloader_counter_container {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+
+  visibility: hidden;
+  opacity: 0;
+}
+
+.preloader_counter_text {
+  @extend %heading-240;
+}

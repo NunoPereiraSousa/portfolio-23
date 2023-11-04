@@ -1,0 +1,5 @@
+{
+  "repositoryName": "portfolio-23",
+  "adapter": "@slicemachine/adapter-next",
+  "libraries": ["./slices"]
+}

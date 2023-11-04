@@ -1,0 +1,118 @@
+.works {
+  padding: 4rem 0;
+  height: 100vh;
+  position: relative;
+
+  @include media("<=tablet") {
+    height: auto;
+    padding: 0 2rem;
+  }
+}
+
+.works_wrapper {
+  display: flex;
+  height: 100%;
+
+  @include media("<=tablet") {
+    flex-direction: column;
+  }
+}
+
+.works_content {
+  display: flex;
+  height: 100%;
+
+  @include media("<=tablet") {
+    flex-direction: column;
+    gap: 6rem;
+  }
+}
+
+.works_left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right: 12rem;
+
+  @include media("<=tablet") {
+    margin-right: 0;
+  }
+}
+
+.works_headline {
+}
+
+.works_description {
+  max-width: 52.1rem;
+
+  @include media("<=tablet") {
+    width: 100%;
+  }
+}
+
+.works_grid {
+  column-gap: 4rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 4rem;
+
+  @include media("<=tablet") {
+    column-gap: 3rem;
+    grid-template-columns: 1fr;
+    row-gap: 3rem;
+  }
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  &:hover .project_image {
+    transform: scale(1.04);
+  }
+
+  &.reversed {
+    transition: $transition;
+    filter: blur(0.5rem);
+
+    @include media("<=tablet") {
+      filter: blur(0);
+    }
+
+    &:hover {
+      filter: blur(0);
+    }
+  }
+}
+
+.project_name {
+}
+
+.project_figure {
+  @include figure(43rem, 70rem);
+
+  cursor: pointer;
+
+  @include media("<=desktop") {
+    @include figure(38rem, 60rem);
+  }
+
+  @media screen and (max-width: 1280px) and (min-height: 860px) {
+    @include figure(100%, 88rem);
+  }
+
+  @include media("<=tablet") {
+    @include figure(50rem, 100%);
+  }
+
+  @include media("<phone") {
+    @include figure(22.5rem, 100%);
+  }
+}
+
+.project_image {
+  @extend %image-cover;
+
+  transition: $transition;
+}

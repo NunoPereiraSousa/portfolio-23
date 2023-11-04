@@ -1,0 +1,29 @@
+.bars {
+  display: flex;
+  gap: 0.8rem;
+  margin: 0 20rem;
+
+  position: relative;
+  z-index: 1;
+
+  @include media("<=tablet") {
+    flex-direction: column;
+    margin: 20rem 0;
+  }
+
+  @include media("<phone") {
+    margin: 14rem 0;
+  }
+}
+
+.bar {
+  display: block;
+
+  height: 100%;
+  width: 0.3rem;
+
+  @include media("<=tablet") {
+    height: 0.1rem;
+    width: 100%;
+  }
+}

@@ -1,0 +1,19 @@
+$color-black: #000000;
+$color-white: #ffffff;
+$color-orange: #ee7d3d;
+$color-red: #d43553;
+$color-blue: #3573ab;
+
+$font-heading: "Mango Grotesque";
+$font-body: "Neue Haas Grotesk Text Pro";
+
+$transition-ease: all 0.4s ease;
+$transition: all 0.4s cubic-bezier(0.7, 0, 0.3, 1);
+
+$z-indexes: (
+  "noscript",
+  "preloader",
+  "grain",
+  "mobile-navigation",
+  "desktop-navigation"
+);

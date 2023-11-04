@@ -1,0 +1,25 @@
+@import "./shared/_reset";
+@import "./shared/_variables";
+@import "./shared/_fonts";
+@import "./shared/_responsive";
+@import "./shared/_base";
+@import "./shared/_animations";
+
+@import "./utils/_functions";
+@import "./utils/_mixins";
+
+@import "./typography/_headings";
+@import "./typography/_paragraph";
+@import "./typography/_classes";
+
+@import "./components/_preloader";
+@import "./components/_bars";
+@import "./components/_award";
+
+@import "./blocs/_hero";
+@import "./blocs/_works";
+@import "./blocs/_awards";
+@import "./blocs/_about";
+@import "./blocs/_contacts";
+
+@import "./pages/_404";

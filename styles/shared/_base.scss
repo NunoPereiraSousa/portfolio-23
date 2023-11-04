@@ -1,0 +1,154 @@
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: calc(100vw / 1920 * 10);
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  user-select: none;
+  overscroll-behavior: none;
+
+  @include media("<=tablet") {
+    font-size: 10px;
+    overflow-x: hidden;
+  }
+}
+
+body {
+  @extend %paragraph-16;
+
+  background: $color-black;
+  color: $color-white;
+  cursor: url(../../public/ball.png);
+}
+
+.page {
+  position: relative;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.reveal {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.line-parent {
+  vertical-align: top;
+  display: inline-block;
+  white-space: pre-line;
+}
+
+strong,
+em {
+  display: inline-block;
+}
+
+.line-parent {
+  overflow: hidden;
+}
+
+.line-child {
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: inherit;
+  white-space: pre-line;
+}
+
+.images_box {
+  position: fixed;
+  top: 4rem;
+  right: 6rem;
+  z-index: 1;
+
+  background: rgba($color-white, 0.5);
+  backdrop-filter: blur(1rem);
+  border-radius: 1rem;
+  padding: 1rem 1.8rem;
+
+  @include media("<=tablet") {
+    display: none;
+  }
+}
+
+.images_box_headline {
+  color: $color-black;
+  font-weight: 500;
+  font-size: 1.6rem;
+  margin-bottom: 0.6rem;
+}
+
+.images_box_grid {
+  display: flex;
+  gap: 1rem;
+}
+
+.locked_flag {
+  height: 2.4rem;
+  width: auto;
+  filter: grayscale(100%);
+}
+
+.flags {
+  position: absolute;
+  height: 3rem;
+  width: 3rem;
+  z-index: 999;
+  cursor: pointer;
+  transition: $transition;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  @include media("<=tablet") {
+    display: none;
+  }
+}
+
+.button {
+  @extend %paragraph-14;
+
+  position: fixed;
+  bottom: 4rem;
+  right: 0;
+  transform: translateX(-50%);
+  z-index: 2;
+
+  background: rgba($color-white, 0.5);
+  backdrop-filter: blur(1rem);
+  border-radius: 1rem;
+  color: $color-black;
+  cursor: pointer;
+  font-weight: 500;
+  padding: 1rem 1.8rem;
+  text-transform: uppercase;
+  transition: $transition;
+
+  &:hover {
+    background: rgba($color-blue, 1);
+    color: $color-white;
+    transform: translateX(-50%) scale(0.95);
+  }
+
+  @include media("<=tablet") {
+    transform: translateX(0);
+    right: 2rem;
+    bottom: 2rem;
+  }
+}
+
+::-webkit-scrollbar {
+  display: none;
+}

@@ -1,0 +1,88 @@
+.contacts {
+  background-color: $color-orange;
+  padding: 4rem 0;
+  position: relative;
+
+  @include media("<=tablet") {
+    padding: 20rem 2rem;
+  }
+
+  @include media("<phone") {
+    padding: 14rem 2rem;
+  }
+}
+
+.contacts_wrapper {
+  display: flex;
+  gap: 12.4rem;
+  height: 100%;
+  padding: 0 20rem;
+
+  @include media("<=tablet") {
+    flex-direction: column;
+    padding: 0;
+  }
+}
+
+.contacts_description {
+  max-width: 40.3rem;
+
+  @include media("<=tablet") {
+    width: 100%;
+  }
+}
+
+.contacts_grid {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @include media("<=tablet") {
+    gap: 4rem;
+  }
+}
+
+.contact {
+  transition: $transition;
+  position: relative;
+
+  &:hover {
+    transform: translateX(10%);
+  }
+}
+
+.contact_figure {
+  @include media("<=laptop") {
+    width: 80%;
+  }
+
+  @include media("<=small-laptop") {
+    width: 70%;
+  }
+}
+
+.contact_image {
+}
+
+.contact_copyright {
+  transform: rotate(270deg);
+  align-self: flex-end;
+  transform-origin: 1rem 2rem;
+  height: fit-content;
+  width: fit-content;
+
+  p {
+    @extend %paragraph-14;
+  }
+
+  strong {
+    font-weight: normal;
+    vertical-align: text-bottom;
+  }
+
+  @include media("<=tablet") {
+    align-self: flex-start;
+    margin-top: 3rem;
+    transform: rotate(0deg);
+  }
+}
