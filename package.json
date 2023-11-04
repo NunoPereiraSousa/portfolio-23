@@ -11,7 +11,6 @@
     "slicemachine": "start-slicemachine"
   },
   "dependencies": {
-    "@gsap/shockingly": "^3.12.2",
     "@prismicio/client": "^7.3.1",
     "@prismicio/next": "^1.4.0",
     "@prismicio/react": "^2.7.3",
