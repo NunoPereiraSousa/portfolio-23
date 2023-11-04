@@ -53,4 +53,8 @@
 
 .preloader_counter_text {
   @extend %heading-240;
+
+  @include media("<phone") {
+    font-size: 10rem;
+  }
 }

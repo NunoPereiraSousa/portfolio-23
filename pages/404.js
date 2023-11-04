@@ -94,12 +94,12 @@ export default function Page({ page, metaTitle, metaDescription }) {
           href="favicon/favicon-16x16.png"
         />
         <link rel="manifest" href="favicon/manifest.json" />
-        <meta name="msapplication-TileColor" content="#EE7D3D" />
+        <meta name="msapplication-TileColor" content="#d43553" />
         <meta
           name="msapplication-TileImage"
           content="favicon/ms-icon-144x144.png"
         />
-        <meta name="theme-color" content="#EE7D3D" />
+        <meta name="theme-color" content="#d43553" />
       </Head>
 
       <Error404

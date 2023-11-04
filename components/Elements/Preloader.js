@@ -118,10 +118,10 @@ export default function Preloader({ preloader }) {
       <div className="preloader_wrapper">
         <div className="preloader_top">
           <div className="preloader_label">
-            <Paragraph>Front-end Developer</Paragraph>
+            <Paragraph>Developer</Paragraph>
           </div>
           <div className="preloader_label">
-            <Paragraph>UI Designer</Paragraph>
+            <Paragraph>Designer</Paragraph>
           </div>
           <div className="preloader_label">
             <Paragraph>Pro Athlete</Paragraph>
