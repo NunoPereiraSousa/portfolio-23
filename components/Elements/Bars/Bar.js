@@ -36,7 +36,7 @@ export default function Bar({ backgroundColor, i }) {
     <span
       className="bar"
       style={{
-        backgroundColor: backgroundColor === "red" ? "#EE7D3D" : "#ffffff",
+        backgroundColor: backgroundColor === "red" ? "#ee7d3d" : "#ee7d3d",
       }}
       ref={barEl}
     ></span>

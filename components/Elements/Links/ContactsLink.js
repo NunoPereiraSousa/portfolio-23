@@ -9,11 +9,14 @@ export default function ContactsLink({
   url,
   alt,
 }) {
+  console.log("====================================");
+  console.log(isEmail);
+  console.log("====================================");
   return (
     <PrismicLink
       className="contact"
-      href={isEmail === "email" ? "mailto:nunopereirasousa00@gmail.com" : link}
-      target={isEmail === "email" ? "_self" : "_blank"}
+      href={isEmail === true ? "mailto:nunopereirasousa00@gmail.com" : link}
+      target={isEmail === true ? "_self" : "_blank"}
     >
       <Figure
         figureClassName={figureClassName}

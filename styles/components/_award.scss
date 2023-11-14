@@ -62,12 +62,15 @@
   @include figure(32.6rem, 24.6rem);
 
   overflow: hidden;
+
+  &:hover .award_image {
+    transform: scale(1.05);
+  }
 }
 
 .award_image {
   @extend %image-cover;
 
-  transform-origin: 0 0;
   transition: $transition;
 }
 

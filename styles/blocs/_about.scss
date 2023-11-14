@@ -142,7 +142,7 @@
 .about_background {
   position: absolute;
   z-index: -1;
-  left: 64rem;
+  left: 58rem;
   top: 0;
 
   @include media("<=tablet") {
@@ -152,7 +152,7 @@
 }
 
 .about_background_figure {
-  @include figure(108rem, 190.8rem);
+  @include figure(108rem, 200.8rem);
 
   @include media("<=tablet") {
     @include figure(100rem, 100vw);

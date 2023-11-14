@@ -93,7 +93,12 @@
 }
 
 .hero_description {
-  max-width: 45.9rem;
+  max-width: 60.3rem;
+
+  @include media("<phone") {
+    max-width: none;
+    width: 100%;
+  }
 }
 
 .hero_button {
@@ -102,6 +107,11 @@
   text-transform: capitalize;
   text-decoration: underline;
   text-decoration-color: $color-white;
+
+  &:hover {
+    color: $color-orange;
+    text-decoration-color: $color-orange;
+  }
 }
 
 .hero_top_middle {

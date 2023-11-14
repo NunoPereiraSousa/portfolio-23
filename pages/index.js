@@ -81,12 +81,12 @@ export default function Page({ page, preloader, metaTitle, metaDescription }) {
           href="favicon/favicon-16x16.png"
         />
         <link rel="manifest" href="favicon/manifest.json" />
-        <meta name="msapplication-TileColor" content="#EE7D3D" />
+        <meta name="msapplication-TileColor" content="#ee7d3d" />
         <meta
           name="msapplication-TileImage"
           content="favicon/ms-icon-144x144.png"
         />
-        <meta name="theme-color" content="#EE7D3D" />
+        <meta name="theme-color" content="#ee7d3d" />
       </Head>
       <SliceZone slices={page.data.slices} components={components} />
     </Layout>
