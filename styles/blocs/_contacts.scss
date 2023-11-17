@@ -59,9 +59,17 @@
   @include media("<=small-laptop") {
     width: 70%;
   }
+
+  @include media("<phone") {
+    width: auto;
+  }
 }
 
 .contact_image {
+  @include media("<phone") {
+    height: 10rem;
+    width: auto;
+  }
 }
 
 .contact_copyright {
