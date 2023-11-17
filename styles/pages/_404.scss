@@ -91,6 +91,9 @@
 }
 
 .error_label {
+  display: flex;
+  gap: 0.3rem;
+
   a {
     text-decoration: underline;
   }

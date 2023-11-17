@@ -31,6 +31,9 @@ export default function Error404({
 
           <div className="error_label">
             <PrismicRichText field={labels[1].label} />
+            <PrismicLink href="mailto:nunopereirasousa00@gmail.com">
+              nunopereirasousa00@gmail.com
+            </PrismicLink>
           </div>
         </div>
       </div>
