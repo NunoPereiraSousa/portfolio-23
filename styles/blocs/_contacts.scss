@@ -48,6 +48,10 @@
 
   &:hover {
     transform: translateX(10%);
+
+    @include media("<=tablet") {
+      transform: none;
+    }
   }
 }
 

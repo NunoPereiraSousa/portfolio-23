@@ -139,6 +139,10 @@ em {
     background: rgba($color-blue, 1);
     color: $color-white;
     transform: translateX(-50%) scale(0.95);
+
+    @include media("<=tablet") {
+      transform: scale(0.95);
+    }
   }
 
   @include media("<=tablet") {
