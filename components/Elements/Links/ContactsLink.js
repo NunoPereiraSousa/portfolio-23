@@ -9,9 +9,6 @@ export default function ContactsLink({
   url,
   alt,
 }) {
-  console.log("====================================");
-  console.log(isEmail);
-  console.log("====================================");
   return (
     <PrismicLink
       className="contact"

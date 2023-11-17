@@ -80,6 +80,7 @@ export default function Page({ page, preloader, metaTitle, metaDescription }) {
           sizes="16x16"
           href="favicon/favicon-16x16.png"
         />
+        <link rel="icon" type="image/x-icon" href="favicon/favicon.ico" />
         <link rel="manifest" href="favicon/manifest.json" />
         <meta name="msapplication-TileColor" content="#ee7d3d" />
         <meta

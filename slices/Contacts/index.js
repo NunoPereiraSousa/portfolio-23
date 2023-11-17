@@ -7,7 +7,6 @@ import { PrismicLink, PrismicRichText } from "@prismicio/react";
  * @param {ContactsProps}
  */
 const Contacts = ({ slice }) => {
-  console.log(slice?.items);
   return (
     <section className="contacts" data-scroll-section>
       <div className="contacts_wrapper">

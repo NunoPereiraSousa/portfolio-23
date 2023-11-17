@@ -121,11 +121,6 @@ export default function App({ Component, pageProps }) {
       }
       location={asPath}
       containerRef={containerRef}
-      // onLocationChange={(scroll) =>
-      //   setTimeout(() => {
-      //     scroll.scrollTo(0, { duration: 0, disableLerp: true });
-      //   }, 500)
-      // }
     >
       <ScrollTriggerProxy />
 
