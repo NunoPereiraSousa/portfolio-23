@@ -1,6 +1,5 @@
-import { PrismicRichText, PrismicText } from "@prismicio/react";
 import Paragraph from "./Paragraph";
-import { useEffect, useRef, useState, useContext } from "react";
+import { useRef, useState, useContext } from "react";
 import { gsap } from "gsap";
 import FontFaceObserver from "fontfaceobserver";
 import AnimationsContext from "@/context/AnimationsContext";
@@ -32,13 +31,6 @@ export default function Preloader({ preloader }) {
       gsap.set(element.current, {
         width: window.innerWidth,
       });
-
-      // gsap.set(".preloader_wrapper", {
-      //   filter: "blur(4rem)",
-      // });
-      // gsap.set(".preloader_counter_container", {
-      //   autoAlpha: 0,
-      // });
 
       let font1 = new FontFaceObserver("Mango Grotesque", {
         weight: 500,

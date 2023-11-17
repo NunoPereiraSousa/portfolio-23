@@ -1,29 +1,25 @@
 import { createClient } from "@/prismicio";
-import { SliceZone } from "@prismicio/react";
 import Head from "next/head";
-import { components } from "../slices";
 import Layout from "@/components/Layout";
-import Preloader from "@/components/Elements/Preloader";
-import OpenToWork from "@/components/Elements/Links/OpenToWork";
 import Error404 from "@/components/Error404";
 
-// PASS NAVIGATION INSIDE LAYOUT COMPONENT navigation={navigation} menus={menus}
-/*
-  navigation,
-  menus,
-  page,
-  footer,
-  metaTitle,
-  metaDescription,
-*/
-
-export default function Page({ page, metaTitle, metaDescription }) {
+export default function Page({ page, metaTitle, metaDescription, metaImage }) {
   return (
     <Layout>
       <Head>
         <title>Nuno Pereira Sousa | 404</title>
         <meta name="title" content={metaTitle} />
         <meta name="description" content={metaDescription} />
+        <meta property="og:title" content={metaTitle} />
+        <meta property="og:description" content={metaDescription} />
+        <meta property="og:url" content={"https://www.nunops.com"} />
+        <meta property="og:image" content={metaImage} />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content={"https://www.nunops.com"} />
+        <meta name="twitter:title" content={metaTitle} />
+        <meta name="twitter:description" content={metaDescription} />
+        <meta name="twitter:image" content={metaImage} />
         <link
           rel="apple-touch-icon"
           sizes="57x57"
@@ -93,6 +89,7 @@ export default function Page({ page, metaTitle, metaDescription }) {
           sizes="16x16"
           href="favicon/favicon-16x16.png"
         />
+        <link rel="icon" type="image/x-icon" href="favicon/favicon.ico" />
         <link rel="manifest" href="favicon/manifest.json" />
         <meta name="msapplication-TileColor" content="#d43553" />
         <meta
@@ -122,6 +119,7 @@ export async function getStaticProps({ params, previewData }) {
       page,
       metaTitle: page.data.meta_title,
       metaDescription: page.data.meta_description,
+      metaImage: page.data.meta_image,
     },
   };
 }

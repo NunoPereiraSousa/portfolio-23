@@ -1,4 +1,4 @@
-import { PrismicLink, PrismicRichText } from "@prismicio/react";
+import { PrismicLink } from "@prismicio/react";
 import Figure from "@/components/Elements/Figure";
 
 export default function ContactsLink({

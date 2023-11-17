@@ -3,16 +3,13 @@ import "locomotive-scroll/dist/locomotive-scroll.css";
 
 import Link from "next/link";
 import { PrismicLink, PrismicProvider } from "@prismicio/react";
-import { repositoryName, linkResolver } from "../prismicio";
+import { linkResolver } from "../prismicio";
 
 import Heading from "@/components/Elements/Heading";
 import Paragraph from "@/components/Elements/Paragraph";
 
 import { useRef } from "react";
-import {
-  LocomotiveScrollProvider,
-  useLocomotiveScroll,
-} from "react-locomotive-scroll";
+import { LocomotiveScrollProvider } from "react-locomotive-scroll";
 import { useRouter } from "next/router";
 import ScrollTriggerProxy from "@/components/Animations/ScrollTriggerProxy";
 import { AnimationsProvider } from "@/context/AnimationsContext";
@@ -20,7 +17,6 @@ import Preloader from "@/components/Elements/Preloader";
 import { TransitionProvider } from "@/context/TransitionContext";
 import TransitionComponent from "@/components/Animations/Transition";
 import OpenToWork from "@/components/Elements/Links/OpenToWork";
-import Images from "@/components/Game/Images";
 import ImagesBox from "@/components/Game/ImagesBox";
 
 const richTextComponents = {
@@ -91,10 +87,8 @@ const NextLinkShim = ({ href, children, locale, ...props }) => {
 };
 
 export default function App({ Component, pageProps }) {
-  const element = useRef(null);
   const containerRef = useRef(null);
-  const { scroll } = useLocomotiveScroll();
-  const { router, asPath } = useRouter();
+  const { asPath } = useRouter();
 
   return (
     <LocomotiveScrollProvider

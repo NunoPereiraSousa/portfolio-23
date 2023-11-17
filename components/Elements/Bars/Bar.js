@@ -1,8 +1,6 @@
 import { useRef } from "react";
 import useIsomorphicLayoutEffect from "../../Animations/UseIsomorphicLayoutEffect";
 import gsap from "gsap";
-import { Power2 } from "gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 export default function Bar({ backgroundColor, i }) {
   const barEl = useRef(null);

@@ -4,13 +4,23 @@ import Head from "next/head";
 import { components } from "../slices";
 import Layout from "@/components/Layout";
 
-export default function Page({ page, preloader, metaTitle, metaDescription }) {
+export default function Page({ page, metaTitle, metaDescription, metaImage }) {
   return (
     <Layout>
       <Head>
         <title>Nuno Pereira Sousa</title>
         <meta name="title" content={metaTitle} />
         <meta name="description" content={metaDescription} />
+        <meta property="og:title" content={metaTitle} />
+        <meta property="og:description" content={metaDescription} />
+        <meta property="og:url" content={"https://www.nunops.com"} />
+        <meta property="og:image" content={metaImage} />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content={"https://www.nunops.com"} />
+        <meta name="twitter:title" content={metaTitle} />
+        <meta name="twitter:description" content={metaDescription} />
+        <meta name="twitter:image" content={metaImage} />
         <link
           rel="apple-touch-icon"
           sizes="57x57"
@@ -109,6 +119,7 @@ export async function getStaticProps({ params, previewData }) {
       preloader,
       metaTitle: page.data.meta_title,
       metaDescription: page.data.meta_description,
+      metaImage: page.data.meta_image,
     },
   };
 }
