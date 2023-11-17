@@ -2,7 +2,7 @@
   @extend %position-fixed;
 
   background-color: $color-blue;
-  height: 100vh;
+  height: 100svh;
   overflow: hidden;
   padding: 4rem;
   z-index: z("preloader");
