@@ -1,7 +1,7 @@
 import { COUNTRIES } from "@/utils/flags";
 
 import { useRef, useState, useContext } from "react";
-import gsap, {Power2} from "gsap";
+import gsap, { Power2 } from "gsap";
 import useIsomorphicLayoutEffect from "../Animations/UseIsomorphicLayoutEffect";
 import AnimationsContext from "@/context/AnimationsContext";
 
@@ -101,6 +101,7 @@ export default function Images() {
         <img
           key={index}
           src={img}
+          alt="Flag"
           className="flags"
           onClick={() => onClickHandler(index)}
           ref={element}
